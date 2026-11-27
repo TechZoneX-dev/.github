@@ -8,6 +8,9 @@
    issue ID, for example `fix(auth): handle expired sessions (#142)`.
 4. **Open a pull request** that says `Closes #142`, with test evidence. Never push
    directly to the default branch.
-5. **Changelog:** add an entry under *Unreleased* in `CHANGELOG.md`, with the issue ID.
+5. **GitHub Actions** run only on pull requests into `main`, `master` or `release/**`
+   (checks only), on pushes to those branches, and on `vX.Y.Z` tags. Don't add other
+   triggers without an approved issue.
+6. **Changelog:** add an entry under *Unreleased* in `CHANGELOG.md`, with the issue ID.
    User-facing "What's New?" text is written separately, in plain language, with no
    issue IDs or labels.
