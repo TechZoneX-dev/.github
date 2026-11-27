@@ -1,0 +1,25 @@
+name: Audit
+description: Parent issue for one audit; each finding is a sub-issue
+title: "Audit: <name> (<DD/MM/YYYY>)"
+labels: ["type:audit"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Audit slug
+      description: Becomes the `audit:<slug>` label on every finding, e.g. 2026-11-security
+    validations:
+      required: true
+  - type: input
+    id: report
+    attributes:
+      label: Report location
+      placeholder: docs/audits/2026-11-27-security.md
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and auditor
+    validations:
+      required: true

@@ -1,0 +1,29 @@
+name: User story
+description: A user story; features, enhancements and tasks become its sub-issues
+title: "[<PRODUCT>-US-___]: As a ... I want ... so that ..."
+labels: ["type:user-story"]
+body:
+  - type: markdown
+    attributes:
+      value: "Story IDs for this product are `<PRODUCT>-US-<nnn>`. After creating the issue, add the `story:<PRODUCT>-US-<nnn>` label."
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Must match one of this repository's `module:` labels.
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: Story
+      value: "As a <role>, I want <capability> so that <benefit>."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Given ... when ... then ..."
+    validations:
+      required: true

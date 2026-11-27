@@ -1,0 +1,42 @@
+name: Enhancement
+description: Improve an existing capability
+title: "[Enhancement]: "
+labels: ["type:enhancement"]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Must match one of this repository's `module:` labels.
+    validations:
+      required: true
+  - type: input
+    id: audit
+    attributes:
+      label: Audit reference
+      description: "`audit:<slug>` label and finding ID (e.g. 2026-11-security F-04), or n/a"
+      placeholder: n/a
+    validations:
+      required: true
+  - type: input
+    id: story
+    attributes:
+      label: User story
+      description: "e.g. <PRODUCT>-US-014, or n/a"
+      placeholder: n/a
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: Who needs this and why?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Given ... when ... then ..."
+    validations:
+      required: true

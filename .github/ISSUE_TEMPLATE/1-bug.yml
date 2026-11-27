@@ -1,0 +1,54 @@
+name: Bug
+description: Something is broken
+title: "[Bug]: "
+labels: ["type:bug"]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Must match one of this repository's `module:` labels.
+    validations:
+      required: true
+  - type: input
+    id: audit
+    attributes:
+      label: Audit reference
+      description: "`audit:<slug>` label and finding ID (e.g. 2026-11-security F-04), or n/a"
+      placeholder: n/a
+    validations:
+      required: true
+  - type: input
+    id: story
+    attributes:
+      label: User story
+      description: "e.g. <PRODUCT>-US-014, or n/a"
+      placeholder: n/a
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behaviour
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version and environment
+      placeholder: "v1.4.0, Android 15, production"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: [critical, high, medium, low]
+    validations:
+      required: true
